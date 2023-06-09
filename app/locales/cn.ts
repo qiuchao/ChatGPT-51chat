@@ -4,9 +4,9 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized:
-      "现在是未授权状态，请前往[登录](/#/auth)页输入正确的访问码，或者\n\n" +
-      "没有💥访问码？💥\n" +
-      "前往购买，[点击跳转](https://pay.adminjs.net)",
+      "现在是未授权状态，请前往 [登录](/#/auth) 页输入正确的访问码\n\n" +
+      "没有**访问码**？[联系客服](/#/access-code) 获取",
+    // "前往购买，[点击跳转](https://pay.adminjs.net)",
   },
   Auth: {
     Title: "需要密码",
@@ -185,8 +185,8 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello:
-      "这是一个没有预设对话角色的新的聊天。\n\n如需使用 GPT 4.0，请在左下角设置的模型选择中切换 gpt-4\n❗选择 gpt-4 模型后要打开“新的聊天”！",
+    BotHello: "这是一个没有预设对话角色的新的聊天。",
+    // "这是一个没有预设对话角色的新的聊天。\n\n如需使用 GPT 4.0，请在左下角设置的模型选择中切换 gpt-4\n❗选择 gpt-4 模型后要打开“新的聊天”！",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,

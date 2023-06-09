@@ -138,7 +138,9 @@ export function SideBar(props: { className?: string }) {
           icon={<PluginIcon />}
           text={shouldNarrow ? undefined : Locale.Plugin.Name}
           className={styles["sidebar-bar-button"]}
-          onClick={() => window.open("https://www.baidu.com")}
+          onClick={() =>
+            navigate(Path.AccessCode, { state: { fromHome: true } })
+          }
           shadow
         />
       </div>
