@@ -4,7 +4,9 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized:
-      "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。",
+      "现在是未授权状态，请前往 [登录](/#/auth) 页输入正确的访问码\n\n" +
+      "没有**访问码**？[联系客服](/#/access-code) 获取",
+    // "前往购买，[点击跳转](https://pay.adminjs.net)",
   },
   Auth: {
     Title: "需要密码",
@@ -39,7 +41,7 @@ const cn = {
     Send: "发送",
     Config: {
       Reset: "清除记忆",
-      SaveAs: "存为面具",
+      SaveAs: "存为对话角色",
     },
   },
   Export: {
@@ -54,8 +56,8 @@ const cn = {
       SubTitle: "可以导出 Markdown 文本或者 PNG 图片",
     },
     IncludeContext: {
-      Title: "包含面具上下文",
-      SubTitle: "是否在消息中展示面具上下文",
+      Title: "包含对话角色上下文",
+      SubTitle: "是否在消息中展示对话角色上下文",
     },
     Steps: {
       Select: "选取",
@@ -118,8 +120,8 @@ const cn = {
       SubTitle: "在预览气泡中预览 Markdown 内容",
     },
     Mask: {
-      Title: "面具启动页",
-      SubTitle: "新建聊天时，展示面具启动页",
+      Title: "对话角色启动页",
+      SubTitle: "新建聊天时，展示对话角色启动页",
     },
     Prompt: {
       Disable: {
@@ -163,8 +165,8 @@ const cn = {
       NoAccess: "输入 API Key 或访问密码查看余额",
     },
     AccessCode: {
-      Title: "访问密码",
-      SubTitle: "管理员已开启加密访问",
+      Title: "访问码",
+      SubTitle: "先输入访问码后使用",
       Placeholder: "请输入访问密码",
     },
     Model: "模型 (model)",
@@ -183,7 +185,8 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: "有什么可以帮你的吗",
+    BotHello: "这是一个没有预设对话角色的新的聊天。",
+    // "这是一个没有预设对话角色的新的聊天。\n\n如需使用 GPT 4.0，请在左下角设置的模型选择中切换 gpt-4\n❗选择 gpt-4 模型后要打开“新的聊天”！",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
@@ -205,14 +208,14 @@ const cn = {
     Revert: "恢复上下文",
   },
   Plugin: {
-    Name: "插件",
+    Name: "访问码",
   },
   Mask: {
-    Name: "面具",
+    Name: "角色",
     Page: {
-      Title: "预设角色面具",
+      Title: "预设对话角色",
       SubTitle: (count: number) => `${count} 个预设角色定义`,
-      Search: "搜索角色面具",
+      Search: "搜索对话角色",
       Create: "新建",
     },
     Item: {
@@ -225,7 +228,7 @@ const cn = {
     },
     EditModal: {
       Title: (readonly: boolean) =>
-        `编辑预设面具 ${readonly ? "（只读）" : ""}`,
+        `编辑预设对话角色 ${readonly ? "（只读）" : ""}`,
       Download: "下载预设",
       Clone: "克隆预设",
     },
@@ -248,8 +251,8 @@ const cn = {
     Skip: "直接开始",
     NotShow: "不再展示",
     ConfirmNoShow: "确认禁用？禁用后可以随时在设置中重新启用。",
-    Title: "挑选一个面具",
-    SubTitle: "现在开始，与面具背后的灵魂思维碰撞",
+    Title: "挑选一个对话角色",
+    SubTitle: "现在开始，与对话角色背后的灵魂思维碰撞",
     More: "查看全部",
   },
 

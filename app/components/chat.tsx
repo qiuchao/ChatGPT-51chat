@@ -377,15 +377,6 @@ export function ChatActions(props: {
       <div
         className={`${chatStyle["chat-input-action"]} clickable`}
         onClick={() => {
-          navigate(Path.Masks);
-        }}
-      >
-        <MaskIcon />
-      </div>
-
-      <div
-        className={`${chatStyle["chat-input-action"]} clickable`}
-        onClick={() => {
           chatStore.updateCurrentSession((session) => {
             if (session.clearContextIndex === session.messages.length) {
               session.clearContextIndex = undefined;

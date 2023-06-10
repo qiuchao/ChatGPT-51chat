@@ -8,8 +8,8 @@ import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
-import MaskIcon from "../icons/mask.svg";
-import PluginIcon from "../icons/plugin.svg";
+import MaskIcon from "../icons/role.svg";
+import PluginIcon from "../icons/key.svg";
 
 import Locale from "../locales";
 
@@ -119,10 +119,8 @@ export function SideBar(props: { className?: string }) {
       }`}
     >
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>ChatGPT Next</div>
-        <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
-        </div>
+        <div className={styles["sidebar-title"]}>51chat.pro</div>
+        <div className={styles["sidebar-sub-title"]}>你的个人 AI 助手</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
         </div>
@@ -140,7 +138,9 @@ export function SideBar(props: { className?: string }) {
           icon={<PluginIcon />}
           text={shouldNarrow ? undefined : Locale.Plugin.Name}
           className={styles["sidebar-bar-button"]}
-          onClick={() => showToast(Locale.WIP)}
+          onClick={() =>
+            navigate(Path.AccessCode, { state: { fromHome: true } })
+          }
           shadow
         />
       </div>
@@ -172,11 +172,6 @@ export function SideBar(props: { className?: string }) {
             <Link to={Path.Settings}>
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
-          </div>
-          <div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank">
-              <IconButton icon={<GithubIcon />} shadow />
-            </a>
           </div>
         </div>
         <div>
