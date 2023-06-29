@@ -22,6 +22,8 @@ export function AccessCode() {
         ></IconButton>
       </div>
       <NextImage src={QRCode} alt="logo" width={1074 / 3} height={1455 / 3} />
+      <div className={styles["qrcode-title"]}>{"添加客服微信获取访问码"}</div>
+      {/*<div className={styles["sub-title"]}>{"(qc_hao)"}</div>*/}
 
       <div className={styles["masks"]}></div>
     </div>
